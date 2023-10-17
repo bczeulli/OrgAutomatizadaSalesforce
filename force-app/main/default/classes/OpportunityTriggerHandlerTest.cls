@@ -17,7 +17,6 @@ public class OpportunityTriggerHandlerTest {
         Opportunity opportunity3 = TestSetup.getOpportunity('Oportunidade 3', 'Aberta', account2.Id, 5000);
 
         insert opportunity1;
-        
         insert opportunity2;
         
         insert opportunity3;
