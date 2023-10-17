@@ -14,6 +14,7 @@ public class OpportunityTriggerHandler {
                 if(currentOpp.AccountId == opp.AccountId){
                     opp.Type = 'Cliente recorrente';
                     isFirstProject = false;
+                    
                     break;
                 }
             }
