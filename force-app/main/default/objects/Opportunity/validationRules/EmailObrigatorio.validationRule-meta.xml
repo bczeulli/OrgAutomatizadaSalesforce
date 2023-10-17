@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmailObrigatorio</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISPICKVAL(PRIORVALUE(StageName), &quot;Aberta&quot;),
+    ISPICKVAL(StageName, &quot;Negociação&quot;),
+    OR(ISBLANK(Email__c), ISBLANK( ProjectDetail__c ))
+)</errorConditionFormula>
+    <errorMessage>Email e Detalhamento do Projeto são obrigatórios para seguir de fase!</errorMessage>
+</ValidationRule>
