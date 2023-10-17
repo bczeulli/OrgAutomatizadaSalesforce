@@ -145,7 +145,7 @@ jobs:
 
             # Authenticate to org using the URL stored in the text file
             - name: 'Authenticate to Integration Org'
-              run: sfdx auth:sfdxurl:store -f ./SFDX_INTEGRATION_URL.txt
+              run: sfdx auth:sfdxurl:store -f ./SFDX_INTEGRATION_URL.txt -s -a develop
 
             # We use SFDX Git Delta to create a directory with only the metadata that has changed.
             # this allows us to deploy only those changes, as opposed to deploying the entire branch. 
@@ -181,7 +181,7 @@ jobs:
               if: ${{ env.APEX_TESTS != 'all' }}
               run: |
                   echo ${{env.APEX_TESTS}}
-                  sfdx force:source:deploy -p "changed-sources/force-app" --checkonly --testlevel RunSpecifiedTests --runtests ${{env.APEX_TESTS}} --json
+                  sfdx force:source:deploy -p "changed-sources/force-app" --checkonly --testlevel RunSpecifiedTests --runtests ${{env.APEX_TESTS}} --target-org develop --json
 
             # If the env variable equals all, we run all tests
             - name: 'Check-only deploy delta changes - run all tests'
