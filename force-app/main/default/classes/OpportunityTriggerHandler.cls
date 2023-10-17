@@ -27,6 +27,7 @@ public class OpportunityTriggerHandler {
     public static void verifyFiles(List<Opportunity> opportunities){
         Set<Id> ids = new Set<Id>();
         for (Opportunity opp : opportunities) {
+            
             ids.add(opp.Id);
         }
 
