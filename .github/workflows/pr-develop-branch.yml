@@ -135,7 +135,13 @@ jobs:
               shell: bash
               run: |
                   echo ${{ secrets.SFDX_DEVELOPER_URL }} > ./SFDX_INTEGRATION_URL.txt
-                  cat ./SFDX_INTEGRATION_URL.txt
+                  
+            - name: Use a Secret to Perform a Task
+              run: |
+                  # Use the secret to perform a specific task, like setting up authentication
+                  MY_SECRET_VALUE="${{ secrets.SFDX_DEVELOPER_URL }}"
+                  echo "Secret value retrieved for use in the workflow."
+                  # Perform other tasks with the secret value.
 
             # Authenticate to org using the URL stored in the text file
             - name: 'Authenticate to Integration Org'
