@@ -17,6 +17,7 @@ public class OpportunityTriggerHandlerTest {
 
         insert opportunity1;
         insert opportunity2;
+        
         insert opportunity3;
         
         Opportunity opp1 = [SELECT id, type, Name FROM Opportunity WHERE Name = 'Oportunidade 1'];
