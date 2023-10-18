@@ -7,7 +7,7 @@ public class OpportunityTriggerHandlerTest {
         // Criação de contas de teste
         Account account1 = TestSetup.getAccount('Conta Teste 1');
         Account account2 = TestSetup.getAccount('Conta Teste 2');
-        insert account1;
+        insert account1; // testeeeeee
         
         insert account2;
 
