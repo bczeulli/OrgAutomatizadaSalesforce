@@ -8,7 +8,6 @@ public class OpportunityTriggerHandlerTest {
         Account account1 = TestSetup.getAccount('Conta Teste 1');
         Account account2 = TestSetup.getAccount('Conta Teste 2');
         insert account1; // testeeeeee
-        
         insert account2;
 
         // Criação de oportunidades de teste
@@ -18,7 +17,6 @@ public class OpportunityTriggerHandlerTest {
 
         insert opportunity1;
         insert opportunity2;
-        
         insert opportunity3;
         
         Opportunity opp1 = [SELECT id, type, Name FROM Opportunity WHERE Name = 'Oportunidade 1'];
